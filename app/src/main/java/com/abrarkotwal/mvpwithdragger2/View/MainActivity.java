@@ -11,7 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.abrarkotwal.mvpwithdragger2.DI.Component.DaggerActivityComponent;
-import com.abrarkotwal.mvpwithdragger2.DI.Model.MvpModule;
+import com.abrarkotwal.mvpwithdragger2.DI.Model.MVPModule;
 import com.abrarkotwal.mvpwithdragger2.InitApplication;
 import com.abrarkotwal.mvpwithdragger2.Presenter.MainContract;
 import com.abrarkotwal.mvpwithdragger2.R;
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
 
         DaggerActivityComponent.builder()
                 .appComponent(InitApplication.get(this).component())
-                .mvpModule(new MvpModule(this))
+                .mvpModule(new MVPModule(this))
                 .build()
                 .inject(this);
 

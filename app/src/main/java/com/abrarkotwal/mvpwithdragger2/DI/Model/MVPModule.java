@@ -8,11 +8,11 @@ import dagger.Module;
 import dagger.Provides;
 
 @Module
-public class MvpModule {
+public class MVPModule {
 
     private MainContract.ViewCallBack viewCallBack;
 
-    public MvpModule(MainContract.ViewCallBack viewCallBack) {
+    public MVPModule(MainContract.ViewCallBack viewCallBack) {
         this.viewCallBack = viewCallBack;
     }
 
